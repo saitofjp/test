@@ -21,6 +21,13 @@ https://gist.github.com/Gab-km/3705015
 
 * pullするときにmasterを取り込むと
 
+* forkとclone
+   cloneして、リクエストしたくなったらforkしてpush
+   http://subtech.g.hatena.ne.jp/miyagawa/20090114/1231910461
+
+* git remote
+    git remote add remote-name url
+
 * mergeとrebaseの違い
    rebaseは、ベースの再構築　ハッシュが変わるよー
 
@@ -30,3 +37,6 @@ https://gist.github.com/Gab-km/3705015
 　git push ダイアログの「Push current branch to alternative branch」をチェックして、名前入れて
 　"更新"を押すと先が変わる
 　でも追従先がかわらん。。。
+
+* Git 使い方 見出し一覧
+   http://transitive.info/article/git/
