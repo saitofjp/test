@@ -40,3 +40,8 @@ https://gist.github.com/Gab-km/3705015
 
 * Git 使い方 見出し一覧
    http://transitive.info/article/git/
+
+* git pull を --set-upstream-to で引数無しで実行可能にする
+http://qiita.com/kjirou/items/e0469aac0e128be380d6
+
+* git config --global push.default upstream
