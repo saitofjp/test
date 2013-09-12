@@ -19,6 +19,8 @@ https://gist.github.com/Gab-km/3705015
     ただし、mergeしたくない時にやってしまうと大変なことになる。
     そんな時は、戻したいコミットのIDを調べて、git reset --hard IDで元に戻せる。
 
+* pullすると
+
 * mergeとrebaseの違い
    rebaseは、ベースの再構築　ハッシュが変わるよー
 
