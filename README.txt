@@ -7,4 +7,5 @@ testtest
 7 test
 8 test
 9 test
-https://gist.github.com/Gab-km/3705015
+10 test bugfix
+http://keijinsonyaban.blogspot.jp/2010/10/successful-git-branching-model.html
