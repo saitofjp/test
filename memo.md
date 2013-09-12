@@ -29,3 +29,4 @@ https://gist.github.com/Gab-km/3705015
 * Web Stormで、git push先を変える
 　git push ダイアログの「Push current branch to alternative branch」をチェックして、名前入れて
 　"更新"を押すと先が変わる
+　でも追従先がかわらん。。。
