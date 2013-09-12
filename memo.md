@@ -7,6 +7,9 @@ https://gist.github.com/Gab-km/3705015
 * masterはリリース出来るもの。という考え
 * ブランチを作って、Pull Requestでマージする
 
+# やりたい
+* git-svnをweb stormで使いたいのだが？
+
 # メモメモ
 
 * remoteとlocalとorigin
