@@ -8,3 +8,4 @@ testtest
 8 test
 9 test
 10 test bugfix
+http://keijinsonyaban.blogspot.jp/2010/10/successful-git-branching-model.html
