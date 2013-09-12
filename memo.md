@@ -19,7 +19,7 @@ https://gist.github.com/Gab-km/3705015
     ただし、mergeしたくない時にやってしまうと大変なことになる。
     そんな時は、戻したいコミットのIDを調べて、git reset --hard IDで元に戻せる。
 
-* pullすると
+* pullするときにmasterを取り込むと
 
 * mergeとrebaseの違い
    rebaseは、ベースの再構築　ハッシュが変わるよー
@@ -29,3 +29,4 @@ https://gist.github.com/Gab-km/3705015
 * Web Stormで、git push先を変える
 　git push ダイアログの「Push current branch to alternative branch」をチェックして、名前入れて
 　"更新"を押すと先が変わる
+　でも追従先がかわらん。。。
