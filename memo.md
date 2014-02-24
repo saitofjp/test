@@ -11,9 +11,8 @@ https://gist.github.com/Gab-km/3705015
 * git-svnをweb stormで使いたいのだが？
 
 # メモメモ
-
+a
 * remoteとlocalとorigin
-
 * fetch と pullの違い
    * http://qiita.com/y42sora/items/e082d64f3f8b424e9b7d
     ただし、mergeしたくない時にやってしまうと大変なことになる。
