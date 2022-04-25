@@ -28,7 +28,7 @@ jobs:
     - name: Export UML    
       uses: docker://rlespinasse/drawio-export:latest
       with:
-        args: -f png -b 10 -o "./Untitled Diagram.drawio.png" "Untitled Diagram.drawio"
+        args: -f png -b 10 -o "Untitled Diagram.drawio.png" "Untitled Diagram.drawio"
 
     - name: Get author and committer info from HEAD commit
       uses: rlespinasse/git-commit-data-action@v1.x
