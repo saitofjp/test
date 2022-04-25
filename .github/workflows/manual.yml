@@ -28,12 +28,15 @@ jobs:
     - name: Export UML    
       uses: docker://rlespinasse/drawio-export:latest
       with:
-        args: -f png -b 10 -o ./ .
-    - name: git add & commit & upload repo
-      continue-on-error: true
-      run: |
-        git config user.name "$GITHUB_ACTOR"
-        git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
-        git add *
-        git commit -m "Exported UML automatically"
-        git push https://$GITHUB_ACTOR:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY.git -f
+        args: -f png -b 10 -o ./ docs
+
+    - name: Get author and committer info from HEAD commit
+      uses: rlespinasse/git-commit-data-action@v1.x
+
+    - name: Commit changed files
+      uses: stefanzweifel/git-auto-commit-action@v4.9.2
+      with:
+        commit_message: "docs: sync draw.io exported files"
+        commit_user_name: "${{ env.GIT_COMMIT_COMMITTER_NAME }}"
+        commit_user_email: "${{ env.GIT_COMMIT_COMMITTER_EMAIL }}"
+        commit_author: "${{ env.GIT_COMMIT_AUTHOR }}"        
