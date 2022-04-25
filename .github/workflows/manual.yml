@@ -28,12 +28,12 @@ jobs:
     - name: Export UML    
       uses: docker://rlespinasse/drawio-export:latest
       with:
-        args: -f svg -o ./ .
+        args: -f png -o ./ .
     - name: git add & commit & upload repo
       continue-on-error: true
       run: |
         git config user.name "$GITHUB_ACTOR"
-        git config user.email "saitofjp@gmail.com"
+        git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
         git add *
         git commit -m "Exported UML automatically"
         git push https://$GITHUB_ACTOR:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY.git -f
