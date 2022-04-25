@@ -29,5 +29,10 @@ jobs:
     - name: Send greeting
       run: echo "Hello ${{ github.event.inputs.name }}"
 
+    - name: wget
+      uses: wei/wget@v1
+      with:
+        args: -O drawio-amd64-17.4.2.deb https://github.com/jgraph/drawio-desktop/releases/download/v17.4.2/drawio-amd64-17.4.2.deb
+        
     - name: Install xmllint
-      run: sudo apt-get install -y https://github.com/jgraph/drawio-desktop/releases/download/v17.4.2/drawio-amd64-17.4.2.deb
+      run: sudo apt-get install -y drawio-amd64-17.4.2.deb
