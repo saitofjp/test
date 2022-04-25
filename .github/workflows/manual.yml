@@ -31,6 +31,7 @@ jobs:
 
     - name: Set up Chromedriver for Selenium
       run: |
-        sudo apt-get update &&
-        wget "https://github.com/jgraph/drawio-desktop/releases/download/v17.4.2/drawio-amd64-17.4.2.deb" &&
-        sudo apt-get install "drawio-amd64-17.4.2.deb" -f
+        sudo apt-get update && 
+        curl -Ls 'https://github.com/jgraph/drawio-desktop/releases/download/v17.2.1/drawio-amd64-17.2.1.deb' -o /tmp/drawio-amd64.deb &&
+        sudo apt-get install --yes --no-install-recommends /tmp/drawio-amd64.deb &&
+        rm /tmp/drawio-amd64.deb
