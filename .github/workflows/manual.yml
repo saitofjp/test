@@ -19,22 +19,21 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "greet"
-  greet:
-    # The type of runner that the job will run on
+  export:
     runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
+    environment:
+      name: UML
     steps:
-    # Runs a single command using the runners shell
-    - name: Send greeting
-      run: echo "Hello ${{ github.event.inputs.name }}"
-
-    - name: Set up Chromedriver for Selenium
+    - uses: actions/checkout@v2
+    - name: Export UML    
+      uses: docker://rlespinasse/drawio-export:latest
+      with:
+        args: -f svg -o ./ .
+    - name: git add & commit & upload repo
+      continue-on-error: true
       run: |
-        sudo apt-get update && 
-        curl -Ls 'https://github.com/jgraph/drawio-desktop/releases/download/v17.2.1/drawio-amd64-17.2.1.deb' -o /tmp/drawio-amd64.deb &&
-        sudo apt-get install --yes --no-install-recommends /tmp/drawio-amd64.deb &&
-        rm /tmp/drawio-amd64.deb
-        
-    - name: Set up Chromedriver for Selenium
-      run: drawio --help
+        git config user.name "$GITHUB_ACTOR"
+        git config user.email "saitofjp@gmail.com"
+        git add *
+        git commit -m "Exported UML automatically"
+        git push https://$GITHUB_ACTOR:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY.git -f
